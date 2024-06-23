@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Bill Calculator</title>
+    <script src="index.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 45%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .input-quantity {
+            width: 50px;
+            padding: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .total-bill {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Grocery Bill Calculator</h1>
+    <div class="container">
+        <div>
+            <h2>Grocery Items</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Price (per unit)</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody id="grocery-items">
+                    <!-- JavaScript will populate this table -->
+                </tbody>
+            </table>
+            <button onclick="calculateTotal()">Calculate Total Bill</button>
+            <p class="total-bill" id="total-bill">Total Bill: $0.00</p>
+        </div>
+        <div>
+            <h2>Grocery Price List</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Grocery Item</th>
+                        <th>Price (per unit)</th>
+                    </tr>
+                </thead>
+                <tbody id="grocery-prices">
+                    <!-- JavaScript will populate this table -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
